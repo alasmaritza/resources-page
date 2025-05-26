@@ -1,0 +1,34 @@
+[
+  {
+    "name": "All", 
+    "active": true
+  },
+  {
+    "name": "Acquisition", 
+    "active": false
+  },
+  {
+    "name": "Communication", 
+    "active": false
+  },
+  {
+    "name": "Engineering", 
+    "active": false
+  },
+  {
+    "name": "Education", 
+    "active": false
+  },
+  {
+    "name": "Productivity", 
+    "active": false
+  },
+  {
+    "name": "Training", 
+    "active": false
+  },
+  {
+    "name": "Workplace", 
+    "active": false
+  }
+]

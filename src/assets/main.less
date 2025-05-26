@@ -1,0 +1,142 @@
+#app {
+  display: grid;
+  grid-gap: 10px;
+  width: 100%;
+  margin: 0 200px;
+  padding: 30px;
+
+  @media only screen and (max-width: 1024px) {
+    margin: 0 20px;
+  } 
+  @media only screen and (max-width: 900px) {
+    margin: 0 10px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    color: #0e4c87;
+
+    h1 {
+      font-weight: 600;
+    }
+
+    .options {
+      display: flex;
+      grid-gap: 15px;
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 5px;
+
+    .category {
+      padding: 5px 15px;
+      border: solid 1px #454b4f;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &.active, &:hover {
+        background-color: lightblue;
+        border-color: lightblue;
+        color: #0e4c87;
+      }
+    }
+  }
+
+  .articles-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+
+    .article {
+      display: flex;
+      position: relative;
+      height: 250px;
+      background-color: #3e5770;
+      background-blend-mode: soft-light;
+      border-radius: 10px;
+      padding: 15px;
+      transition: display ease-in .5s;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 3px 3px 10px #0e4c87;
+        transition: ease .2s;
+      }
+
+      .btns {
+        display: flex;
+        grid-gap: 10px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        .btn {
+          width: 20px;
+          height: 20px;
+          padding: 10px;
+          background-color: #00263a;
+          color: white;
+          border-radius: 50%;
+          cursor: pointer;
+
+          &:hover {
+            color: #00263a;
+            background-color: white;
+            transition: ease-in .1s;
+          }
+
+          &.saved {
+            color: #00d2ff;
+          }
+        }
+      }
+
+      .info {
+        align-self: end;
+        color: white;
+        .category {
+          display: flex;
+          grid-gap: 5px;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .show-more {
+    display: flex;
+    grid-gap: 10px;
+    justify-self: center;
+    width: fit-content;
+    cursor: pointer;
+
+    .handle {
+      display: flex;
+      align-items: center;
+      grid-gap: 10px;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
