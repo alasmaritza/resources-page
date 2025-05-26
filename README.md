@@ -1,6 +1,7 @@
 # resources-page-alas
 
-This is the Developer Assignment project made by Maritza Alas
+This is the Developer Assignment project made by Maritza Alas.
+The page is made out of three components: Header, TableLayout, and Articles. All page data is stored in json files and fetched with an api call.
 
 ## Recommended IDE Setup
 
